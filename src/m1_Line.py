@@ -178,11 +178,11 @@ class Line(object):
     """ Represents a line segment in 2-dimensional space. """
 
     def __init__(self, start, end):
-        self.start = Point(start.x, start.y)
-        self.end = Point(end.x, end.y)
+        self.start = start.clone()
+        self.end = end.clone()
         self.number_of_clones = 0
-        self.init_start = Point(start.x, start.y)
-        self.init_end = Point(end.x, end.y)
+        self.init_start = start.clone()
+        self.init_end = end.clone()
         """
         What comes in:
           -- self
