@@ -19,7 +19,7 @@ def main():
     run_test_simple_t()
     run_test_set_colors()
     run_test_move_by()
-    # run_test_clone()
+    run_test_clone()
 
 
 def run_test_simple_t():
@@ -263,12 +263,16 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # --------------------------------------------------------------
-        # TODO: 7.
+        # DONE: 7.
         #   READ the above specification, including the Example.
         #   Implement and test this method by uncommenting the appropriate
         #     run_test method in main. Compare the graphics window to
         #     clone.pdf.
         # --------------------------------------------------------------
+        t2 = CapitalT(self.h_rect.get_center(), self.h_rect.get_width(),
+                      self.v_rect.get_height(), self.h_rect.get_height())
+        t2.set_colors(self.v_rect.fill_color, self.v_rect.outline_color)
+        return t2
 
 
 # ----------------------------------------------------------------------
